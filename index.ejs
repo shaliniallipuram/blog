@@ -1,0 +1,24 @@
+<!-- views/index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/main.css">
+  <title>Blog</title>
+</head>
+<body>
+  <header>
+    <h1>My Blog</h1>
+  </header>
+  <div class="container">
+    <% posts.forEach(post => { %>
+      <div class="post">
+        <h2><%= post.title %></h2>
+        <p><%= post.content %></p>
+        <a href="/post/<%= post._id %>">Read more</a>
+      </div>
+    <% }) %>
+  </div>
+</body>
+</html>
